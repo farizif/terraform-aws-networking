@@ -1,9 +1,10 @@
-module "vpc" {
-  source = "farizif/networking/aws"
+module "networking" {
+  source  = "farizif/networking/aws"
+  version = "0.1.1"
 
   vpc_config = {
     cidr_block = "10.0.0.0/16"
-    name       = "13-local-modules"
+    name       = "My VPC"
   }
 
   subnet_config = {
